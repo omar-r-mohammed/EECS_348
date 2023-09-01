@@ -11,6 +11,6 @@ purpose:makes the hello world C file to be tracked by git for the first lab
 
 int main()
 {
-	printf("%s\n","hello world");
+	printf("%s\n","bye world");
 return 0;
 }

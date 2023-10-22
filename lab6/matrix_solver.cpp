@@ -86,7 +86,7 @@ int main() {
     addition(matrixA,matrixB,size);
     display(output,size);
 
-    cout << "\nMatrix Product (A+B):" <<endl;
+    cout << "\nMatrix Product (A*B):" <<endl;
     multiply(matrixA,matrixB,size);
     display(output,size);
 

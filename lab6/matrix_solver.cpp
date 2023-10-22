@@ -43,7 +43,7 @@ int * multiply(int one[MAX_SIZE][MAX_SIZE], int two[MAX_SIZE][MAX_SIZE],int size
     return *output;
 }
 // Function to read data from a file and store it in a 2D array
-void  readMatrixFromFile(int matrix[MAX_SIZE][MAX_SIZE], int &size){
+void  read(int matrix[MAX_SIZE][MAX_SIZE], int &size){
     file >> size;
 
     for (int i = 0; i < size; ++i) {
@@ -59,7 +59,7 @@ void  readMatrixFromFile(int matrix[MAX_SIZE][MAX_SIZE], int &size){
 }
 
 // Function to display a matrix with nicely aligned columns
-void displayMatrix(int matrix[MAX_SIZE][MAX_SIZE], int size) {
+void display(int matrix[MAX_SIZE][MAX_SIZE], int size) {
     for (int i = 0; i <size; ++i){
         for (int j = 0; j < size; ++j) {
             cout << matrix[i][j] << " ";
@@ -69,30 +69,30 @@ void displayMatrix(int matrix[MAX_SIZE][MAX_SIZE], int size) {
 }
 
 int main() {
-    readMatrixFromFile(matrixA, size);
-    readMatrixFromFile(matrixB, size);
+    read(matrixA, size);
+    read(matrixB, size);
     
     file.close();
     cout << "Omar Mohammed" << endl;
     cout << "Lab #6: Matrix manipulation\n" <<endl;
 
     cout << "Matrix A:" << endl;
-    displayMatrix(matrixA, size);
+    display(matrixA, size);
 
     cout << "\nMatrix B:" << endl;
-    displayMatrix(matrixB, size);
+    display(matrixB, size);
 
     cout << "\nMatrix Sum (A+B):"<<endl;
     addition(matrixA,matrixB,size);
-    displayMatrix(output,size);
+    display(output,size);
 
     cout << "\nMatrix Product (A+B):" <<endl;
     multiply(matrixA,matrixB,size);
-    displayMatrix(output,size);
+    display(output,size);
 
     cout << "\nMatrix Difference (A-B):" <<endl;
     subtraction(matrixA,matrixB,size);
-    displayMatrix(output,size);
+    display(output,size);
 
     return 0;
 }

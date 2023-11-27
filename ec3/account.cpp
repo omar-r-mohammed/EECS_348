@@ -45,7 +45,7 @@ void Account::withdraw(const double& money)
 void Account::display() const 
 {
     //Display account details
-    std::cout << "Account Holder: " << this->accountOwner << std::endl;
+    std::cout << "Account Owner: " << this->accountOwner << std::endl;
     std::cout << "Account Number: " << this->accountNum << std::endl;
     std::cout << "Balance: " << this->balance << std::endl;
 }

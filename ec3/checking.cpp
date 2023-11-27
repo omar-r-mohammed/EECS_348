@@ -20,7 +20,7 @@ void Checking::withdraw(const double& amount) {
 void Checking::display() const {
     std::cout << std::fixed << std::setprecision(2);
     std::cout << "Account details for Savings Account (ID: " << this->accountNum << ")" << std::endl;
-    std::cout << "Account Holder: " << this->accountOwner << std::endl;
+    std::cout << "Account Owner: " << this->accountOwner << std::endl;
     std::cout << "Account Balance: $" << this->getBalance() << std::endl;
     std::cout << "Maximum Overdraft: $" << -this->maxOverdraft << std::endl;
 }
